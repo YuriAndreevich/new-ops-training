@@ -1,5 +1,7 @@
 import { defineConfig } from 'vite'
-import { ErrorOverlay } from 'vite-plugin-error-overlay'
+// import { ErrorOverlay } from 'vite-plugin-error-overlay'
+import checker from 'vite-plugin-checker';
+// import reactRefresh from '@vitejs/plugin-react-refresh'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
@@ -10,9 +12,19 @@ export default defineConfig({
   },
   plugins: [react({
     exclude: /\.stories\.(t|j)sx?$/,
-    include: '**/*.tsx',
+    include: '**/*.jsx',
   }),
-  ErrorOverlay()
+  // ErrorOverlay({
+  //   exclude: [/\.stories\.(t|j)sx?$/, /node_modules/],
+  //   include: '**/*.jsx'
+  // }),
+  checker({
+    // typescript: true,
+  }),
+    // reactRefresh({
+    //   exclude: [/\.stories\.(t|j)sx?$/, /node_modules/],
+    //   include: '**/*.jsx'
+    // })
   ],
 
   base: '/',
