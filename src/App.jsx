@@ -1,4 +1,5 @@
 import Test from "./components/test";
+import Dashboard from "./components/dashboard";
 import { useSelector, useDispatch } from "react-redux";
 import { decrement, increment } from "./redux/features/counter/counterSlice";
 
@@ -8,6 +9,7 @@ function App() {
   return (
     <div className="App">
       <Test />
+      <Dashboard/>
       <div>
         <button
           aria-label="Increment value"

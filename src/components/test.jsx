@@ -3,13 +3,13 @@ import Draggable from "react-draggable";
 
 function test() {
   return (
-    <div>
+    <div className='w-10 h-10'>
       <Draggable
         grid={[10, 10]}
         //   {...dragHandlers}
       >
         <div className="box text-3xl font-bold underline">
-          I snap to a 50 x 50 grid
+          1
         </div>
       </Draggable>
     </div>
