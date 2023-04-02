@@ -23,7 +23,7 @@ function App() {
           Decrement
         </button>
       </div>
-    </div>
+    </div> 
   );
 }
 
