@@ -1,42 +1,31 @@
-
-import Draggable from "react-draggable";
 import React, { useState } from "react";
+import Draggable from "react-draggable";
 
-
-function dashboard() {
-
-  const [izv, setIzv] = useState([
-
-  ])
- const [activeDrags, setactiveDrags] = useState(0)
-  const startMove = () =>{}
-  const endMove = () =>{}
-     const onStart = () => {
-      setactiveDrags(activeDrags + 1)
-    };
-  
-  const  onStop = () => {
-      setactiveDrags(activeDrags - 1)
-      
-    };
-    const dragHandlers = {onStart: onStart, onStop: onStop};
-
-  //  const onDrop = (e) => {
-  //     setactiveDrags(activeDrags - 1)
-  //     if (e.target.classList.contains("drop-target")) {
-  //       alert("Dropped!");
-  //       e.target.classList.remove('hovered');
-  //     }
-  //   };
+function test() {
   return (
-    <div className='flex'>
-      <div ><Draggable onStart={() => false} 
-      {...dragHandlers}
-      >1</Draggable></div>
-      <div>2</div>
-      <div>3</div>
+    <div className="w-[calc(100vw-200px)] p-10 mx-auto   bg-[#f2f2f2] rounded-xl  flex justify-between">
+      <Draggable
+        grid={[10, 10]}
+      // defaultPosition={{x: 25, y: 25}}
+      >
+        <div className="box text-3xl font-bold underline">1</div>
+      </Draggable>
+      <Draggable
+        grid={[10, 10]}
+      // defaultPosition={{x: 25, y: 25}}
+      >
+        <div className="box text-3xl font-bold underline">2</div>
+      </Draggable>
+      <Draggable
+        grid={[10, 10]}
+      // defaultPosition={{x: 25, y: 25}}
+      >
+        <div className="box text-3xl font-bold underline">3</div>
+      </Draggable>
+      <div className="box text-3xl font-bold underline">X</div>
+
     </div>
   );
 }
 
-export default dashboard;
+export default test;
